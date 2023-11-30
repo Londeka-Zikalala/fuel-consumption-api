@@ -28,7 +28,7 @@ app.use(express.static('public'));
 //route handlers
 app.get('/', fuelConsumptionRoute.showIndex)
 app.get('/vehicles', fuelConsumptionRoute.getVehicles)
-app.post('/vehicle', fuelConsumption.addVehicle)
+app.post('/vehicles', fuelConsumption.addVehicle)
 
 app.get('/api/vehicles', fuelConsumptionAPI.vehicles);
 app.get('/api/vehicle', fuelConsumptionAPI.vehicle);

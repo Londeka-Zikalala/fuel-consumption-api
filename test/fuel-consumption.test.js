@@ -93,6 +93,7 @@ describe("The FuelConsumption API", function () {
         });
 
         vehicles = await fuelConsumptionTest.vehicles();
+        console.log(vehicles)
         await assert.equal(3, vehicles.length);
 
     });

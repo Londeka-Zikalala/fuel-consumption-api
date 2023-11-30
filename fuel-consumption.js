@@ -130,7 +130,7 @@ export default function FuelConsumptionAPI(db) {
         }
 
     }
-
+    
     return {
         addVehicle,
         vehicle,
