@@ -1,0 +1,25 @@
+<h1>Vehicle Fuel Consumption</h1>
+<form action="/vehicles" method="GET">
+<table>
+ <thead>
+    <tr>
+      <th>Car Registration</th>
+      <th>Description</th>
+      <th>Total Distance</th>
+      <th>Total Fuel Spent</th>
+      <th>Fuel Consumption</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each allVehicles}}
+      <tr>
+        <td>{{this.reg_number}}</td>
+        <td>{{this.description}}</td>
+        <td>{{this.total_distance}}</td>
+        <td>{{this.total_liters}}</td>
+        <td>{{this.fuel_consumption}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+</form>
