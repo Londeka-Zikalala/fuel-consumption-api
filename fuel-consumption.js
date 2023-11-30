@@ -2,7 +2,7 @@
 
 export default function FuelConsumptionAPI(db) {
 
-    async function addVehicle({ description, regNumber }) {
+    async function addVehicle({ description, regNumber,totalLiters,totalAmount,totalDistance,fuelConsumption }) {
 
         if (!description) {
             return {
@@ -26,17 +26,17 @@ export default function FuelConsumptionAPI(db) {
             }
         }
 
-        const result = await db.oneOrNone(`insert into vehicles (description, reg_number) values ($1, $2) returning id`, [description, regNumber]);
+        const result = await db.oneOrNone(`insert into vehicles (description, reg_number, total_liters,total_amount,total_distance,fuel_consumption) values ($1, $2,$3,$4,$5,$6) returning id`, [description, regNumber,totalLiters,totalAmount,totalDistance,fuelConsumption]);
         return {
             status: "success",
             id: result.id
         };
     }
-
+//
     async function vehicles() {
         return await db.manyOrNone(`select * from vehicles`);
     }
-
+//
     async function vehicle(id) {
         return await db.oneOrNone(`select * from vehicles where id = $1`, [id]);
     }
@@ -126,11 +126,13 @@ export default function FuelConsumptionAPI(db) {
 
         return {
             status: "success",
-            id: result.id
+            id: result.id,
+            total_distance: distance, 
+            total_liters: results.total_liters,
+            fuel_consumption: fuelConsumption
         }
 
     }
-    
     return {
         addVehicle,
         vehicle,

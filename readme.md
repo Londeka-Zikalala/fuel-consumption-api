@@ -25,7 +25,8 @@ Get a specific car     | `/api/vehicle`   | `GET`
 Get a list vehicles    | `/api/vehicles`  | `GET`
 Refuel a vehicle       | `/api/refuel`    | `POST`
 
-When recording a refuel via the API using `/api/refuel` endpoint you need to specify the `vehicleId`, the amount paid for fuel, how many liters of fuel was bought, and the current `odometer reading` (*distance* in the API) of the vehicle (the total kilometers on the vehicles clock) and if the vehicle was filled up to capacity or not. The fuel consumption algorithm depends on the fact that you are recording details each time the tank is being filled up. It use the difference between the last time you refueled the tank and how much was needed at last refuel to fill up the tank. Which will be the quantity of fuel used in litres.
+When recording a refuel via the API using `/api/refuel` endpoint you need to specify the `vehicleId`, the amount paid for fuel, how many liters of fuel was bought, and the current `o
+dometer reading` (*distance* in the API) of the vehicle (the total kilometers on the vehicles clock) and if the vehicle was filled up to capacity or not. The fuel consumption algorithm depends on the fact that you are recording details each time the tank is being filled up. It use the difference between the last time you refueled the tank and how much was needed at last refuel to fill up the tank. Which will be the quantity of fuel used in litres.
 
 ## What you need to build
 

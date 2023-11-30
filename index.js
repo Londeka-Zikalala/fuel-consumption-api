@@ -26,9 +26,12 @@ app.set('views', './views');
 app.use(express.static('public'));
 
 //route handlers
-app.get('/', fuelConsumptionRoute.showIndex)
-app.get('/vehicles', fuelConsumptionRoute.getVehicles)
-app.post('/vehicles', fuelConsumption.addVehicle)
+app.get('/', fuelConsumptionRoute.showIndex);
+app.get('/vehicles', fuelConsumptionRoute.getVehicles);
+app.post('/vehicles/add', fuelConsumptionRoute.addVehicleRoute);
+app.get('/vehicles/add', fuelConsumptionRoute.addVehicleRoute );
+app.post('/vehicles/refuel', fuelConsumptionRoute.refuelRoute);
+app.get('/vehicles/refuel', fuelConsumptionRoute.showRefuel);
 
 app.get('/api/vehicles', fuelConsumptionAPI.vehicles);
 app.get('/api/vehicle', fuelConsumptionAPI.vehicle);

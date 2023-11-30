@@ -1,8 +1,16 @@
+ <nav>
+        <a href="/vehicles/refuel">Refuel</a>
+        <a href="/">Home</a>
+    </nav>
 <h1>Add A car</h1>
-<form action="/vehicles">
-<label for="reg_number">Registration</label>
-<input type="text" name="reg_number" value="{{regNumber}}">
-<label for="description">Descrption</label>
-<input type="text" name="description" value="{{description}}">
-<input type="submit" value="Add Car">
+<form action="/vehicles/add" method="POST">
+    <label for="reg_number">Registration</label>
+    <input type="text" id="reg_number" name="reg_number" value="{{regNumber}}">
+    <label for="description">Description</label>
+    <input type="text" id="description" name="description" value="{{description}}">
+    <input type="hidden" id="total_liters" name="total_liters" value="">
+    <input type="hidden" id="total_amount" name="total_amount" value="">
+    <input type="hidden" id="total_distance" name="total_distance" value="">
+    <input type="hidden" id="fuel_consumption" name="fuel_consumption" value="">
+    <input type="submit" value="Add Car">
 </form>

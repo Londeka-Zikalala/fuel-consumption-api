@@ -24,6 +24,7 @@ describe("The FuelConsumption API", function () {
         const result = await fuelConsumptionTest.addVehicle({
             regNumber : "CY 125-980",
             description : "Grey Toyota Etios"
+            
         });
 
         assert.equal("success", result.status)

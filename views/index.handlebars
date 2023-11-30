@@ -1,13 +1,10 @@
-<h1>Vehicle Fuel Consumption</h1>
-<h1>Add A car</h1>
-<form action="/vehicles">
-<label for="reg_number">Registration</label>
-<input type="text" name="reg_number" value="{{regNumber}}">
-<label for="description">Descrption</label>
-<input type="text" name="description" value="{{description}}">
-<input type="submit" value="Add Car">
-</form>
 
+   <nav>
+        <a href="/vehicles/add">Add</a>
+        <a href="/vehicles/refuel">Refuel</a>
+        <a href="/">Home</a>
+    </nav>
+<h1>Vehicle Fuel Consumption</h1>
 <form action="/vehicles" method="GET">
 <table>
  <thead>
